@@ -1,22 +1,28 @@
 <template>
-  <el-main id="list1">
+  <el-container style="height: 100%;" id="list2">
+    <left></left>
+  <el-main>
     <el-table
       :data="tableData"
       border
-      style="width: 100%">
+      style="width: 100%" @row-click="tobuys()">
       <el-table-column
         v-for="items in listTitle"
         :prop="items.prop"
-        :label="items.label">
+        :label="items.label" >
       </el-table-column>
 
     </el-table>
     </el-main>
+    </el-container>
 </template>
 
 <script>
+import left from './left'
 export default {
+
   name: 'list1',
+  components:{left},
   data () {
     return {
       listTitle:[
@@ -27,8 +33,7 @@ export default {
         {prop:'comp',label:'组织分类'},
         {prop:'bumen',label:'需求部门'},
         {prop:'type',label:'物资类别'},
-        {prop:'time',label:'申请时间'},
-        {prop:'now',label:'当前处理人'},
+        {prop:'time',label:'申请时间'}
       ],
       tableData:[
         {
@@ -39,10 +44,15 @@ export default {
           comp:'集团公司',
           bumen:'采购部',
           type:'礼品',
-          time:'2019-7-12 15:00',
-          now:'xxx'
+          time:'2019-7-12 15:00'
         }
       ]
+    }
+  },
+  methods:{
+    tobuys(){
+      this.$router.push({name:'buys'})
+      console.log()
     }
   }
 }

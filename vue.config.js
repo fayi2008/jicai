@@ -1,7 +1,7 @@
 module.exports = {
-  baseUrl: '/',
+  baseUrl: './',
   devServer: {
-    port: 8081,
+   // port: 8081,
     // proxy: {
     //   '/api': {    //将www.exaple.com印射为/apis
     //     target: 'http://10.100.7.226',  // 接口域名

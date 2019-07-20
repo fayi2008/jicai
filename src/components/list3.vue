@@ -33,8 +33,7 @@ export default {
         {prop:'comp',label:'组织分类'},
         {prop:'bumen',label:'需求部门'},
         {prop:'type',label:'物资类别'},
-        {prop:'time',label:'申请时间'},
-        {prop:'now',label:'当前处理人'},
+        {prop:'time',label:'申请时间'}
       ],
       tableData:[
         {
@@ -45,8 +44,7 @@ export default {
           comp:'集团公司',
           bumen:'采购部',
           type:'礼品',
-          time:'2019-7-12 15:00',
-          now:'xxx'
+          time:'2019-7-12 15:00'
         }
       ]
     }

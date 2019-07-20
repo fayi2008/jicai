@@ -26,8 +26,8 @@ export default {
   data () {
     return {
       listTitle:[
-        {prop:'num',label:'流程号'},
-        {prop:'class',label:'类型'},
+        {prop:'num',label:'出账日期'},
+        {prop:'class',label:'账单来源'},
         {prop:'setter',label:'申请人'},
         {prop:'getter',label:'需求人'},
         {prop:'comp',label:'组织分类'},
@@ -37,7 +37,7 @@ export default {
       ],
       tableData:[
         {
-          num:'X123456789',
+          num:'2019-7-25 15:00',
           class:'京东',
           setter:'xxx',
           getter:'xxx',
