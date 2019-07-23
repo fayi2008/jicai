@@ -354,6 +354,8 @@
           2、凭证2
         </li>
       </ul>
+      <div>备注</div>
+      <el-input  type="textarea" v-model="form.name" disabled="" placeholder=""></el-input>
       <div slot="footer" class="dialog-footer">
         <el-button @click="dialogFormVisible = false">取 消</el-button>
         <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
@@ -525,9 +527,7 @@ export default {
 .el-form {
   width: 100%;
 }
-.el-dialog__body{
-  text-align: left;
-}
+
 .add-table {
   width: 100%;
   border-left: 1px solid #888;

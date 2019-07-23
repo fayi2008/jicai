@@ -31,5 +31,7 @@ export default {
 .el-menu{
   height:100%;
 }
-
+.el-dialog__body{
+  text-align: left;
+}
 </style>

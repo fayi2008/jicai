@@ -5,6 +5,8 @@ import Router from 'vue-router'
 import list1 from '../components/list1'//首页
 import list2 from '../components/list2'//首页
 import list3 from '../components/list3'//首页
+import list4 from '../components/list4'//首页
+import list5 from '../components/list5'//首页
 import  buy from '../components/buy'//首页
 import  buys from '../components/buys'
 Vue.use(Router)
@@ -37,6 +39,16 @@ export default new Router({
       path: '/list3',
       name: 'list3',
       component: list3
+    },
+    {
+      path: '/list4',
+      name: 'list4',
+      component: list4
+    },
+    {
+      path: '/list5',
+      name: 'list5',
+      component: list5
     },
     {
       path: '/buy',

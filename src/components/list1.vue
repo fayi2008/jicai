@@ -40,7 +40,8 @@ export default {
         {prop: 'bumen', label: '需求部门'},
         {prop: 'type', label: '物资类别'},
         {prop: 'time', label: '申请时间'},
-        {prop: 'now', label: '当前处理人'}
+        {prop: 'now', label: '当前处理人'},
+
       ],
       tableData: [
         {
