@@ -9,8 +9,9 @@
       </el-submenu>
       <el-submenu index="2">
         <template slot="title">对账模块</template>
-        <router-link :to="{ name: 'list4'}"><el-menu-item index="1-2-1">对账单</el-menu-item></router-link>
-        <router-link :to="{ name: 'list5'}"><el-menu-item index="1-2-2">开票信息</el-menu-item></router-link>
+        <router-link :to="{ name: 'list4'}"><el-menu-item index="1-2-1">京东对账单</el-menu-item></router-link>
+        <router-link :to="{ name: 'list5'}"><el-menu-item index="1-2-2">京东开票信息</el-menu-item></router-link>
+        <router-link :to="{ name: 'list6'}"><el-menu-item index="1-2-3">物资目录对账单</el-menu-item></router-link>
       </el-submenu>
     </el-menu>
   </el-aside>

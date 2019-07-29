@@ -39,12 +39,20 @@
         </el-col>
       </el-row>
       <el-row>
+        <el-col :span="12">
+          <el-form-item label="分管副总裁">
+            <el-input v-model="form.name" placeholder="弹窗选取，对接组织架构"></el-input>
+          </el-form-item>
+        </el-col>
+
+      </el-row>
+      <el-row>
         <el-col>
           <H1>物资基本信息</H1>
         </el-col>
       </el-row>
       <el-row>
-        <el-col :span="24">
+        <el-col :span="12">
           <el-form-item label="组织分类">
             <el-select v-model="value" placeholder="请选择">
               <el-option
@@ -56,9 +64,7 @@
             </el-select>
           </el-form-item>
         </el-col>
-      </el-row>
-      <el-row>
-        <el-col :span="24">
+        <el-col :span="12">
           <el-form-item label="管理层级">
             <el-select v-model="value" placeholder="请选择">
               <el-option
@@ -73,8 +79,24 @@
       </el-row>
       <el-row>
         <el-col :span="12">
+          <el-form-item label="科目类别">
+            <el-select v-model="value3" placeholder="请选择">
+              <el-option
+                v-for="item in type2"
+                :key="item.value"
+                :label="item.label"
+                :value="item.value">
+              </el-option>
+            </el-select>
+          </el-form-item>
+
+        </el-col>
+        <el-col :span="12"></el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="12">
           <el-form-item label="物资类别">
-            <el-select v-model="value1" placeholder="请选择">
+            <el-select v-model="value2" placeholder="请选择">
               <el-option
                 v-for="item in option3"
                 :key="item.value"
@@ -86,7 +108,7 @@
         </el-col>
         <el-col :span="12">
           <el-form-item label="物资类型">
-            <el-select v-model="value" placeholder="请选择">
+            <el-select v-model="value4" placeholder="请选择">
               <el-option
                 v-for="item in option4"
                 :key="item.value"
@@ -116,7 +138,7 @@
         <el-row>
           <el-col :span="24">
             <h3>收货信息</h3>
-            <el-button>选择地址</el-button>
+            <el-button  style="margin: 20px;" type="primary">选择地址</el-button>
           </el-col>
         </el-row>
         <el-row>
@@ -216,14 +238,14 @@
           <tbody>
           <tr>
             <td>自动获取</td>
-            <td><el-input size="mini" v-model="form.name" class="mini" disabled="" placeholder="自动获取"></el-input></td>
-            <td><el-input size="mini" v-model="form.name"  class="mini" disabled="" placeholder="选取"></el-input></td>
+            <td><el-input size="mini" v-model="form.name" class="mini"  placeholder="选取"></el-input></td>
+            <td><el-input size="mini" v-model="form.name"  class="mini"  placeholder="选取"></el-input></td>
+            <td>自动获取</td>
+            <td><el-input size="mini" v-model="form.name"  class="mini"  placeholder="填写"></el-input></td>
             <td>自动获取</td>
             <td>自动获取</td>
-            <td>自动获取</td>
-            <td>自动获取</td>
-            <td><el-input size="mini" v-model="form.name"  class="mini" disabled="" placeholder="选取"></el-input></td>
-            <td><el-input size="mini" v-model="form.name"  class="mini" disabled="" placeholder="选取"></el-input></td>
+            <td><el-input size="mini" v-model="form.name"  class="mini" placeholder="填写"></el-input></td>
+            <td><el-input size="mini" v-model="form.name"  class="mini" placeholder="填写"></el-input></td>
             <td>自动获取</td>
             <td>自动获取</td>
             <td>自动获取</td>
@@ -345,6 +367,19 @@ export default {
       radio: '2',
       value1: '',
       value: '',
+      value2: '',
+      value3:'',
+      value4: '',
+      type2:[
+        {
+          label: '非招待类',
+          value: '1'
+        },
+        {
+          label: '招待类',
+          value: '2'
+        }
+      ],
       option1: [
         {
           label: '集团公司',

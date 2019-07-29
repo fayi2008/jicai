@@ -2,19 +2,19 @@
   <el-container style="height: 100%;" id="list2">
     <left></left>
     <el-main>
-      <el-row style="padding-bottom: 20px;">
-        <el-col :span="24" style="text-align: right;">
-          <el-button type="primary" @click="dialogFormVisible=true">合并（弹窗填写备注）</el-button>
-        </el-col>
-      </el-row>
+      <!--<el-row style="padding-bottom: 20px;">-->
+        <!--<el-col :span="24" style="text-align: right;">-->
+          <!--<el-button type="primary" @click="dialogFormVisible=true">合并（弹窗填写备注）</el-button>-->
+        <!--</el-col>-->
+      <!--</el-row>-->
       <el-table
         :data="tableData"
         border
         style="width: 100%">
-        <el-table-column
-          type="selection"
-          width="55">
-        </el-table-column>
+        <!--<el-table-column-->
+          <!--type="selection"-->
+          <!--width="55">-->
+        <!--</el-table-column>-->
         <el-table-column
           v-for="items in listTitle"
           :prop="items.prop"
